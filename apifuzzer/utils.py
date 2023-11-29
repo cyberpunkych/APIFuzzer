@@ -137,6 +137,8 @@ def init_pycurl(debug=False):
     _curl.setopt(pycurl.TIMEOUT, 10)
     _curl.setopt(pycurl.COOKIEFILE, "")
     _curl.setopt(pycurl.USERAGENT, get_version())
+    if os.getenv('HTTP_PROXY'):
+        _curl.setopt(pycurl.PROXY, os.getenv('HTTP_PROXY'))
     return _curl
 
 
