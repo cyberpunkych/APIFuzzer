@@ -47,7 +47,7 @@ setup_options = dict(
     author='Peter Kiss',
     author_email='peter.kiss@linuxadm.hu',
     url='https://github.com/KissPeter/APIFuzzer/',
-    scripts=['APIFuzzer'],
+    scripts=['APIFuzzer.py'],
     packages=find_packages(exclude=["test"]),
     install_requires=get_requirements(),
     license="GNU General Public License v3.0",

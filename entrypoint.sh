@@ -6,4 +6,4 @@ else
     args=$@
 fi
 echo "apifuzzer args=$args"
-./APIFuzzer $args
+./APIFuzzer.py $args

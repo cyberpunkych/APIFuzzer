@@ -25,7 +25,7 @@ WORKDIR /src/
 COPY --from=builder /app/wheels /wheels/
 RUN pip install /wheels/*
 COPY apifuzzer apifuzzer
-COPY APIFuzzer .
+COPY APIFuzzer.py .
 COPY entrypoint.sh .
 ENTRYPOINT ["./entrypoint.sh"]
 HEALTHCHECK --interval=5s --timeout=5s --retries=3 --start-period=2s CMD pgrep APIFuzzer
